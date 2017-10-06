@@ -9,8 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
     @IBOutlet weak var firstButton: UIButton!
+    
+    
+    @IBAction func firstMethod(_ sender: UIButton) {
+        if(firstButton.backgroundColor == .red){
+            firstButton.backgroundColor = .blue
+        }
+        else{
+            firstButton.backgroundColor = .red
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
