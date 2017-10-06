@@ -15,12 +15,23 @@ class ViewController: UIViewController {
     
     
     @IBAction func firstMethod(_ sender: UIButton) {
+        
+        view.backgroundColor = createRandomColor()
+        
         if(firstButton.backgroundColor == .red){
             firstButton.backgroundColor = .blue
         }
         else{
             firstButton.backgroundColor = .red
         }
+    }
+    private func createRandomColor() -> UIColor{
+        
+        let redValue: CGFloat = CGFloat (Double (arc4random_uniform(256))/255.00)
+        let blueValue: CGFloat = CGFloat (Double (arc4random_uniform(256))/255.00)
+        let greenValue: CGFloat = CGFloat (Double (arc4random_uniform(256))/255.00)
+        
+        return UIColor(red: redValue,  green: greenValue, blue: blueValue, alpha: CGFloat(1))
     }
     
     
